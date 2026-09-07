@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>晚点 LatePost 访谈学习导航</title>
+<style>
+  :root { --bg:#f6f1e8; --ink:#1b1a17; --muted:#6b6458; --paper:#fffdf8; --line:#e6ddd0; --accent:#c45c26; --navy:#1b2a4a; --link:#1a56db; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:"Songti SC","Noto Serif SC","Palatino Linotype",serif; background:var(--bg); color:var(--ink); line-height:1.55; }
+  header { background:var(--navy); color:#f6f1e8; padding:48px 24px 36px; }
+  header .wrap, main { max-width:1120px; margin:0 auto; }
+  header h1 { font-size:clamp(28px,4vw,44px); margin:0 0 8px; }
+  header p { margin:0; color:#d9d2c5; max-width:720px; }
+  .stat { display:flex; gap:18px; flex-wrap:wrap; margin-top:22px; }
+  .stat b { background:#c45c26; color:#fff; padding:6px 12px; border-radius:999px; font-size:13px; font-family:ui-sans-serif,system-ui,sans-serif; }
+  main { padding:28px 20px 80px; }
+  h2 { font-size:22px; margin:36px 0 14px; border-bottom:2px solid var(--navy); display:inline-block; padding-bottom:4px; }
+  .lead { color:var(--muted); margin-top:-6px; max-width:780px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:14px; }
+  .src,.card,.path { background:var(--paper); border:1px solid var(--line); border-radius:14px; padding:16px 16px 14px; text-decoration:none; color:inherit; }
+  .src:hover,.card:hover { border-color:var(--accent); }
+  .src { display:flex; flex-direction:column; gap:4px; }
+  .src span { color:var(--muted); font-size:13px; font-family:ui-sans-serif,system-ui,sans-serif; }
+  .tag { font-family:ui-sans-serif,system-ui,sans-serif; font-size:11px; letter-spacing:.06em; color:var(--accent); margin-bottom:8px; }
+  .card h3,.path h3 { margin:0 0 6px; font-size:16px; }
+  .meta { margin:0; font-size:13px; color:var(--navy); }
+  .note { margin:8px 0 0; font-size:13px; color:var(--muted); }
+  .chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
+  .chip { font-family:ui-sans-serif,system-ui,sans-serif; font-size:12px; background:#1b2a4a; color:#f6f1e8; padding:3px 8px; border-radius:999px; text-decoration:none; }
+  .toolbar { display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin:12px 0 16px; font-family:ui-sans-serif,system-ui,sans-serif; }
+  input,select { font:14px ui-sans-serif,system-ui,sans-serif; padding:8px 12px; border:1px solid var(--line); border-radius:10px; background:var(--paper); }
+  input { min-width:240px; flex:1; }
+  table { width:100%; border-collapse:collapse; background:var(--paper); font-family:ui-sans-serif,system-ui,sans-serif; font-size:13.5px; }
+  th { text-align:left; background:var(--navy); color:#f6f1e8; padding:10px; }
+  td { padding:9px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+  tr:hover td { background:#faf6ef; }
+  td a { color:var(--link); text-decoration:none; font-weight:600; }
+  .num { font-variant-numeric:tabular-nums; font-weight:700; color:var(--navy); }
+  .theme { display:inline-block; background:#efe6d6; border-radius:6px; padding:1px 7px; font-size:12px; }
+  footer { color:var(--muted); font-size:13px; margin-top:40px; font-family:ui-sans-serif,system-ui,sans-serif; }
+  .warn { background:#fff4e5; border:1px solid #f0d2a8; border-radius:12px; padding:12px 14px; font-family:ui-sans-serif,system-ui,sans-serif; font-size:13.5px; color:#5c4a2e; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>晚点 LatePost 访谈学习导航</h1>
+    <p>把「对话」当成可复盘的案例课：先走主题路径，再按需检索全集。文字访谈在官网与公众号，音频访谈在《晚点聊 LateTalk》。</p>
+    <div class="stat">
+      <b>播客官方 180 期 · 2021.11—2026.09</b>
+      <b>本页可检索目录随 CSV 更新</b>
+    </div>
+  </div>
+</header>
+<main>
+  <h2>官方入口</h2>
+  <p class="lead">完整最新目录以官网为准。微信搜「晚点 LatePost」「晚点对话」可读图文版。</p>
+  <div class="grid">
+    <a class="src" href="https://www.latepost.com/" target="_blank"><strong>晚点官网</strong><span>文字报道与对话</span></a>
+    <a class="src" href="https://podcast.latepost.com/" target="_blank"><strong>晚点聊 LateTalk</strong><span>播客主页</span></a>
+    <a class="src" href="https://podcast.latepost.com/episodes" target="_blank"><strong>全集归档</strong><span>官方 180 期</span></a>
+    <a class="src" href="https://podcasts.apple.com/podcast/晚点聊-latetalk/id1564877433" target="_blank"><strong>Apple Podcasts</strong><span>订阅收听</span></a>
+    <a class="src" href="https://feeds.fireside.fm/latetalk/rss" target="_blank"><strong>RSS</strong><span>订阅源</span></a>
+    <a class="src" href="https://github.com/LiuJiuJie/latepost-interviews" target="_blank"><strong>本仓库</strong><span>清单与数据</span></a>
+  </div>
+  <h2>怎么学</h2>
+  <div class="warn">本页只整理对话 / 专访 / 口述 / 晚点聊，不是晚点全部报道。缺期用 https://podcast.latepost.com/期数 打开。</div>
+  <div class="grid" style="margin-top:14px">
+    <div class="path"><h3>入门 3 期</h3><p>先建立晚点访谈的气质</p><div class="chips"><a class="chip" href="https://podcast.latepost.com/135" target="_blank">#135</a><a class="chip" href="https://podcast.latepost.com/71" target="_blank">#71</a><a class="chip" href="https://podcast.latepost.com/99" target="_blank">#99</a></div></div>
+    <div class="path"><h3>大模型主线</h3><p>Scaling 质疑 → DeepSeek → 效率 / 蒸馏 / 自进化</p><div class="chips"><a class="chip" href="https://podcast.latepost.com/71" target="_blank">#71</a><a class="chip" href="https://podcast.latepost.com/103" target="_blank">#103</a><a class="chip" href="https://podcast.latepost.com/100" target="_blank">#100</a><a class="chip" href="https://podcast.latepost.com/163" target="_blank">#163</a><a class="chip" href="https://podcast.latepost.com/177" target="_blank">#177</a><a class="chip" href="https://podcast.latepost.com/179" target="_blank">#179</a></div></div>
+    <div class="path"><h3>Agent 系列</h3><p>Agent#1 到 #7</p><div class="chips"><a class="chip" href="https://podcast.latepost.com/106" target="_blank">#106</a><a class="chip" href="https://podcast.latepost.com/110" target="_blank">#110</a><a class="chip" href="https://podcast.latepost.com/111" target="_blank">#111</a><a class="chip" href="https://podcast.latepost.com/130" target="_blank">#130</a><a class="chip" href="https://podcast.latepost.com/136" target="_blank">#136</a><a class="chip" href="https://podcast.latepost.com/137" target="_blank">#137</a></div></div>
+    <div class="path"><h3>具身智能主线</h3><p>从 Optimus 观察到融资与落地</p><div class="chips"><a class="chip" href="https://podcast.latepost.com/86" target="_blank">#86</a><a class="chip" href="https://podcast.latepost.com/112" target="_blank">#112</a><a class="chip" href="https://podcast.latepost.com/148" target="_blank">#148</a><a class="chip" href="https://podcast.latepost.com/155" target="_blank">#155</a><a class="chip" href="https://podcast.latepost.com/166" target="_blank">#166</a><a class="chip" href="https://podcast.latepost.com/180" target="_blank">#180</a></div></div>
+    <div class="path"><h3>创始人精读</h3><p>组织、代价、路径</p><div class="chips"><a class="chip" href="https://podcast.latepost.com/172" target="_blank">#172</a><a class="chip" href="https://podcast.latepost.com/175" target="_blank">#175</a><a class="chip" href="https://podcast.latepost.com/173" target="_blank">#173</a><a class="chip" href="https://podcast.latepost.com/117" target="_blank">#117</a></div></div>
+    <div class="path"><h3>出海与全球化</h3><p>品牌、电商、美国创业</p><div class="chips"><a class="chip" href="https://podcast.latepost.com/97" target="_blank">#97</a><a class="chip" href="https://podcast.latepost.com/92" target="_blank">#92</a><a class="chip" href="https://podcast.latepost.com/73" target="_blank">#73</a><a class="chip" href="https://podcast.latepost.com/129" target="_blank">#129</a></div></div>
+  </div>
+  <h2>精选文字访谈</h2>
+  <p class="lead">适合精读的长文。部分与播客互为图文版。</p>
+  <div class="grid" id="written"></div>
+  <h2>晚点聊 LateTalk 目录</h2>
+  <p class="lead">点击「打开」进入官方节目页。数据来自 <a href="./data/latetalk.csv">data/latetalk.csv</a>。</p>
+  <div class="toolbar">
+    <input id="q" placeholder="搜索标题 / 嘉宾 / 主题 / 期数" oninput="renderEps()" />
+    <select id="theme" onchange="renderEps()"><option value="">全部主题</option></select>
+    <span id="count" style="color:#6b6458"></span>
+  </div>
+  <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>期</th><th>标题</th><th>日期</th><th>主题</th><th>嘉宾</th><th></th></tr></thead>
+      <tbody id="tb"><tr><td colspan="6">正在加载目录…</td></tr></tbody>
+    </table>
+  </div>
+  <footer>整理于 2026-09-07，供个人学习导航。版权归晚点 LatePost。</footer>
+</main>
+<script>
+function parseCSV(text) {
+  const rows = [];
+  let row = [], cell = '', q = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i], n = text[i+1];
+    if (q) {
+      if (c === '"' && n === '"') { cell += '"'; i++; }
+      else if (c === '"') q = false;
+      else cell += c;
+    } else {
+      if (c === '"') q = true;
+      else if (c === ',') { row.push(cell); cell = ''; }
+      else if (c === '\n') { row.push(cell); if (row.some(x => x !== '')) rows.push(row); row = []; cell = ''; }
+      else if (c !== '\r') cell += c;
+    }
+  }
+  if (cell || row.length) { row.push(cell); rows.push(row); }
+  const header = rows.shift();
+  return rows.map(r => Object.fromEntries(header.map((h, i) => [h, r[i] || ''])));
+}
+let EPS = [];
+function renderEps() {
+  const q = (document.getElementById('q').value || '').trim().toLowerCase();
+  const th = document.getElementById('theme').value;
+  const rows = EPS.filter(e => {
+    if (th && e['主题'] !== th) return false;
+    if (!q) return true;
+    return (e['期数'] + ' ' + e['标题'] + ' ' + e['嘉宾'] + ' ' + e['主题'] + ' ' + e['日期']).toLowerCase().includes(q);
+  });
+  document.getElementById('count').textContent = '显示 ' + rows.length + ' / ' + EPS.length;
+  document.getElementById('tb').innerHTML = rows.map(e => `
+    <tr>
+      <td class="num">${e['期数']}</td>
+      <td>${e['标题']}</td>
+      <td>${e['日期']}</td>
+      <td><span class="theme">${e['主题']}</span></td>
+      <td>${e['嘉宾']}</td>
+      <td><a href="${e['链接']}" target="_blank">打开</a></td>
+    </tr>`).join('');
+}
+Promise.all([
+  fetch('./data/latetalk.csv').then(r => r.text()),
+  fetch('./data/written.csv').then(r => r.text())
+]).then(([talk, written]) => {
+  EPS = parseCSV(talk);
+  const sel = document.getElementById('theme');
+  [...new Set(EPS.map(e => e['主题']))].filter(Boolean).sort().forEach(t => {
+    const o = document.createElement('option'); o.value = t; o.textContent = t; sel.appendChild(o);
+  });
+  renderEps();
+  document.getElementById('written').innerHTML = parseCSV(written).map(w => `
+    <a class="card" href="${w['链接']}" target="_blank" rel="noopener">
+      <div class="tag">${w['主题']} · ${w['年份']}</div>
+      <h3>${w['标题']}</h3>
+      <p class="meta">${w['嘉宾/对象']}</p>
+      <p class="note">${w['备注']}</p>
+    </a>`).join('');
+}).catch(() => {
+  document.getElementById('tb').innerHTML = '<tr><td colspan="6">无法加载 CSV。请通过 GitHub Pages 打开，或直接查看 data/latetalk.csv</td></tr>';
+});
+</script>
+</body>
+</html>
